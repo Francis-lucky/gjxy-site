@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重庆邮电大学 远东联邦大学联合学院</title>
+    <style>
+        @font-face {
+            font-family: 'Alibaba-PuHuiTi';
+            src: url('../public/fonts/alibaba-puhuiti.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Alibaba-PuHuiTi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .min-h-screen {
+            min-height: 100vh;
+        }
+
+        .bg-teal-500 {
+            background-color: #14b8a6;
+        }
+
+        .bg-teal-600 {
+            background-color: #0d9488;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+
+        .text-base {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .tracking-wide {
+            letter-spacing: 0.025em;
+        }
+
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
+
+        .mt-12 {
+            margin-top: 3rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .opacity-90 {
+            opacity: 0.9;
+        }
+
+        .max-w-7xl {
+            max-width: 80rem;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .items-start {
+            align-items: flex-start;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .gap-1 {
+            gap: 0.25rem;
+        }
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .gap-3 {
+            gap: 0.75rem;
+        }
+
+        .gap-4 {
+            gap: 1rem;
+        }
+
+        .gap-6 {
+            gap: 1.5rem;
+        }
+
+        .gap-8 {
+            gap: 2rem;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .top-full {
+            top: 100%;
+        }
+
+        .left-0 {
+            left: 0;
+        }
+
+        .right-3 {
+            right: 0.75rem;
+        }
+
+        .right-4 {
+            right: 1rem;
+        }
+
+        .top-1\/2 {
+            top: 50%;
+        }
+
+        .left-1\/2 {
+            left: 50%;
+        }
+
+        .bottom-4 {
+            bottom: 1rem;
+        }
+
+        .transform {
+            transform: var(--tw-transform);
+        }
+
+        .-translate-y-1\/2 {
+            --tw-translate-y: -50%;
+            transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y, 0));
+        }
+
+        .-translate-x-1\/2 {
+            --tw-translate-x: -50%;
+            transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y, 0));
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #99f6e4;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.25rem;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 0.5rem 0;
+            min-width: 160px;
+            z-index: 50;
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease-out;
+        }
+
+        .dropdown.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.875rem;
+            border-left: 2px solid transparent;
+            transition: all 0.3s ease-out;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f0fdfa;
+            color: #0d9488;
+            padding-left: 1.5rem;
+            border-left-color: #14b8a6;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .search-form {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 0.5rem 1rem;
+            padding-right: 2.5rem;
+            border-radius: 9999px;
+            color: #1f2937;
+            font-size: 0.875rem;
+            width: 16rem;
+            outline: none;
+            border: 2px solid #7dd3fc;
+        }
+
+        .search-input:focus {
+            ring: 2px;
+            ring-color: #7dd3fc;
+        }
+
+        .search-button {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            color: #374151;
+        }
+
+        .banner-section {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .banner-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s;
+        }
+
+        .banner-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .banner-button:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .banner-button.prev {
+            left: 1rem;
+        }
+
+        .banner-button.next {
+            right: 1rem;
+        }
+
+        .banner-indicators {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .indicator {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .indicator.active {
+            background: white;
+        }
+
+        .indicator:not(.active) {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .main-content {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .text-3xl {
+                font-size: 1.875rem;
+            }
+            
+            .banner-section {
+                height: 600px;
+            }
+            
+            .nav-list {
+                flex-direction: row;
+            }
+            
+            .search-input {
+                width: 16rem;
+            }
+        }
+
+        .info-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-header {
+            background: #14b8a6;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+        }
+
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .more-link {
+            position: absolute;
+            top: 0.75rem;
+            right: 1rem;
+            color: #f97316;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .more-link:hover {
+            color: #ea580c;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .news-list {
+            list-style: none;
+        }
+
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-bullet {
+            color: #14b8a6;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .news-content {
+            flex: 1;
+        }
+
+        .news-link {
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            transition: color 0.3s;
+        }
+
+        .news-link:hover {
+            color: #0d9488;
+        }
+
+        .news-date {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        .footer {
+            background: #14b8a6;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .footer-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #99f6e4;
+        }
+
+        .footer-separator {
+            color: #7dd3fc;
+        }
+
+        .footer-info {
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .footer-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            display: inline-block;
+        }
+
+        .chevron-down {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .search-icon {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .chevron-left, .chevron-right {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .banner-section {
+                height: 400px;
+            }
+            
+            .text-2xl {
+                font-size: 1.25rem;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .search-input {
+                width: 12rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-teal-500 text-white">
+            <div class="text-center py-4">
+                <h1 class="text-2xl font-bold tracking-wide">
+                    重庆邮电大学 远东联邦大学联合学院
+                </h1>
+                <p class="text-sm mt-1 opacity-90">
+                    CQUPT - FEFU Joint Institute
+                </p>
+            </div>
+
+            <nav class="bg-teal-600 px-4 py-3 relative">
+                <!-- 修改导航栏布局，将搜索框与导航菜单放在同一行 -->
+                <div class="max-w-7xl mx-auto flex items-center justify-between">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">首页</a>
+                        </li>
+                        <li class="nav-item" onmouseenter="showDropdown('college')" onmouseleave="hideDropdown('college')">
+                            <a href="#" class="nav-link">
+                                学院概况
+                                <svg class="chevron-down" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
+                            <div id="dropdown-college" class="dropdown">
+                                <a href="./college-overview/introduction.html" class="dropdown-item">学院简介</a>
+                                <a href="#" class="dropdown-item">合作院校</a>
+                                <a href="#" class="dropdown-item">领导分工</a>
+                            </div>
+                        </li>
+                        <li class="nav-item" onmouseenter="showDropdown('talent')" onmouseleave="hideDropdown('talent')">
+                            <a href="#" class="nav-link">
+                                人才培养
+                                <svg class="chevron-down" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
+                            <div id="dropdown-talent" class="dropdown">
+                                <a href="#" class="dropdown-item">学生活动</a>
+                                <a href="#" class="dropdown-item">风采展示</a>
+                                <a href="#" class="dropdown-item">学习交流</a>
+                                <a href="#" class="dropdown-item">下载专区</a>
+                            </div>
+                        </li>
+                        <li class="nav-item" onmouseenter="showDropdown('admission')" onmouseleave="hideDropdown('admission')">
+                            <a href="#" class="nav-link">
+                                招生就业
+                                <svg class="chevron-down" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
+                            <div id="dropdown-admission" class="dropdown">
+                                <a href="#" class="dropdown-item">招生信息</a>
+                                <a href="#" class="dropdown-item">就业指导</a>
+                            </div>
+                        </li>
+                        <li class="nav-item" onmouseenter="showDropdown('academic')" onmouseleave="hideDropdown('academic')">
+                            <a href="#" class="nav-link">
+                                教学教务
+                                <svg class="chevron-down" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
+                            <div id="dropdown-academic" class="dropdown">
+                                <a href="#" class="dropdown-item">培养模式</a>
+                                <a href="#" class="dropdown-item">培养方案</a>
+                                <a href="#" class="dropdown-item">教务管理</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">新闻动态</a>
+                        </li>
+                    </ul>
+
+                    <!-- 搜索框现在与导航菜单在同一行的右侧 -->
+                    <form class="search-form" onsubmit="handleSearch(event)">
+                        <input
+                            type="text"
+                            placeholder="请输入关键词搜索"
+                            class="search-input"
+                            id="searchInput"
+                        />
+                        <button type="submit" class="search-button">
+                            <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="absolute inset-0">
+                <img id="bannerImage" src="../public/images/banner1.jpg" alt="学院现代化建筑群" class="banner-image" />
+            </div>
+
+            <button class="banner-button prev" onclick="prevSlide()">
+                <svg class="chevron-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="banner-button next" onclick="nextSlide()">
+                <svg class="chevron-right" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <div class="banner-indicators">
+                <button class="indicator active" onclick="setSlide(0)"></button>
+                <button class="indicator" onclick="setSlide(1)"></button>
+                <button class="indicator" onclick="setSlide(2)"></button>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="grid">
+                <!-- 新闻动态 -->
+                <section class="info-card">
+                    <div class="card-header">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span class="card-title">新闻动态</span>
+                        <a href="#" class="more-link">更多+</a>
+                    </div>
+                    <div class="card-content">
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 通知公示 -->
+                <section class="info-card">
+                    <div class="card-header">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span class="card-title">通知公示</span>
+                        <a href="#" class="more-link">更多+</a>
+                    </div>
+                    <div class="card-content">
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【国际教育】国际学院学生团队在第十四届挑战杯竞赛中斩获佳绩</a>
+                                </div>
+                                <span class="news-date">2024.11.11</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 学生活动 -->
+                <section class="info-card">
+                    <div class="card-header">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span class="card-title">学生活动</span>
+                        <a href="#" class="more-link">更多+</a>
+                    </div>
+                    <div class="card-content">
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【学生活动】国际学院举办第十届文化艺术节开幕式</a>
+                                </div>
+                                <span class="news-date">2025.08.20</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【学生活动】国际学院学生参加重庆市大学生创新创业大赛</a>
+                                </div>
+                                <span class="news-date">2025.08.18</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【学生活动】国际学院组织学生参观重庆科技馆</a>
+                                </div>
+                                <span class="news-date">2025.08.15</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【学生活动】国际学院举办英语演讲比赛决赛</a>
+                                </div>
+                                <span class="news-date">2025.08.12</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【学生活动】国际学院学生会换届选举大会成功举行</a>
+                                </div>
+                                <span class="news-date">2025.08.10</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 招生资讯 -->
+                <section class="info-card">
+                    <div class="card-header">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span class="card-title">招生资讯</span>
+                        <a href="#" class="more-link">更多+</a>
+                    </div>
+                    <div class="card-content">
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【招生信息】2025年国际学院本科招生简章</a>
+                                </div>
+                                <span class="news-date">2025.08.20</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【招生信息】中外合作办学项目招生政策解读</a>
+                                </div>
+                                <span class="news-date">2025.08.18</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【招生信息】国际学院专业介绍及就业前景</a>
+                                </div>
+                                <span class="news-date">2025.08.15</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【招生信息】2025年招生计划及录取分数线</a>
+                                </div>
+                                <span class="news-date">2025.08.12</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-bullet">•</span>
+                                <div class="news-content">
+                                    <a href="#" class="news-link">【招生信息】国际学院奖学金政策及申请条件</a>
+                                </div>
+                                <span class="news-date">2025.08.10</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">友情链接</h3>
+                    <div class="footer-links">
+                        <a href="http://jw.cq.gov.cn" target="_blank" rel="noopener noreferrer" class="footer-link">重庆市教育委员会</a>
+                        <span class="footer-separator">|</span>
+                        <a href="http://zfwb.cq.gov.cn" target="_blank" rel="noopener noreferrer" class="footer-link">重庆市人民政府外事办公室</a>
+                        <span class="footer-separator">|</span>
+                        <a href="http://gaj.cq.gov.cn" target="_blank" rel="noopener noreferrer" class="footer-link">重庆公安出入境网上服务大厅</a>
+                        <span class="footer-separator">|</span>
+                        <a href="http://www.cqupt.edu.cn" target="_blank" rel="noopener noreferrer" class="footer-link">重庆邮电大学</a>
+                        <span class="footer-separator">|</span>
+                        <a href="http://gjc.cqupt.edu.cn" target="_blank" rel="noopener noreferrer" class="footer-link">重庆邮电大学国际处</a>
+                        <span class="footer-separator">|</span>
+                        <a href="http://jsj.moe.gov.cn" target="_blank" rel="noopener noreferrer" class="footer-link">教育部教育涉外监管信息网</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">联系我们</h3>
+                    <div class="footer-info">
+                        <p>通讯地址：重庆市南岸区崇文路2号重庆邮电大学国际学院</p>
+                        <p>邮编：400065</p>
+                        <p>联系电话：+68-23-62480019</p>
+                        <p>传真：+68-23-62471951</p>
+                        <p>技术支持：CQUPTHUB工作室</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Banner carousel functionality
+        let currentSlide = 0;
+        const bannerImages = [
+            '../public/images/banner1.jpg',
+            '../public/images/banner2.jpg',
+            '../public/images/banner3.jpg'
+        ];
+
+        function setSlide(index) {
+            currentSlide = index;
+            document.getElementById('bannerImage').src = bannerImages[currentSlide];
+            
+            // Update indicators
+            const indicators = document.querySelectorAll('.indicator');
+            indicators.forEach((indicator, i) => {
+                if (i === currentSlide) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % bannerImages.length;
+            setSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + bannerImages.length) % bannerImages.length;
+            setSlide(currentSlide);
+        }
+
+        // Auto-play carousel
+        setInterval(nextSlide, 5000);
+
+        // Dropdown functionality
+        let activeDropdown = null;
+        let hideTimeout = null;
+
+        function showDropdown(menuName) {
+            if (hideTimeout) {
+                clearTimeout(hideTimeout);
+                hideTimeout = null;
+            }
+            
+            // Hide all dropdowns first
+            const allDropdowns = document.querySelectorAll('.dropdown');
+            allDropdowns.forEach(dropdown => {
+                dropdown.classList.remove('show');
+            });
+            
+            // Show the selected dropdown
+            const dropdown = document.getElementById('dropdown-' + menuName);
+            if (dropdown) {
+                dropdown.classList.add('show');
+                activeDropdown = menuName;
+            }
+        }
+
+        function hideDropdown(menuName) {
+            hideTimeout = setTimeout(() => {
+                const dropdown = document.getElementById('dropdown-' + menuName);
+                if (dropdown) {
+                    dropdown.classList.remove('show');
+                }
+                activeDropdown = null;
+            }, 300);
+        }
+
+        // Search functionality
+        function handleSearch(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById('searchInput');
+            const query = searchInput.value.trim();
+            
+            if (query) {
+                // In a real application, this would navigate to a search results page
+                alert('搜索功能：' + query);
+                // For demo purposes, we'll just show an alert
+                // In the actual implementation, you would redirect to a search results page
+            }
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-item')) {
+                const allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('show');
+                });
+                activeDropdown = null;
+            }
+        });
+    </script>
+</body>
+</html>
